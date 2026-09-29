@@ -1,0 +1,55 @@
+print("=" * 40)
+print("      IoT SMART PARKING SYSTEM")
+print("=" * 40)
+slots = {
+    1: "Available",
+    2: "Occupied",
+    3: "Available",
+    4: "Occupied",
+    5: "Available"
+}
+print("\nParking Slot Status:")
+print("-" * 30)
+for slot, status in slots.items():
+    print(f"Slot {slot}: {status}")
+available = list(slots.values()).count("Available")
+occupied = list(slots.values()).count("Occupied")
+print("-" * 30)
+print(f"Available Slots : {available}")
+print(f"Occupied Slots  : {occupied}")
+print("\nVehicle detected at Slot 1...")
+slots[1] = "Occupied"
+print("\nUpdated Parking Status:")
+print("-" * 30)
+for slot, status in slots.items():
+    print(f"Slot {slot}: {status}")
+available = list(slots.values()).count("Available")
+print("-" * 30)
+print(f"Available Slots : {available}")
+print("=" * 40)
+
+OUTPUT:
+========================================
+      IoT SMART PARKING SYSTEM
+========================================
+Parking Slot Status:
+------------------------------
+Slot 1: Available
+Slot 2: Occupied
+Slot 3: Available
+Slot 4: Occupied
+Slot 5: Available
+------------------------------
+Available Slots : 3
+Occupied Slots  : 2
+Vehicle detected at Slot 1...
+Updated Parking Status:
+------------------------------
+Slot 1: Occupied
+Slot 2: Occupied
+Slot 3: Available
+Slot 4: Occupied
+Slot 5: Available
+------------------------------
+Available Slots : 2
+========================================
